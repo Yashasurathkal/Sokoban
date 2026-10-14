@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://b8n8riaoexfyv"]
+
+[ext_resource type="Texture2D" uid="uid://bsfclnvmg2001" path="res://assets/Bg.png" id="1_7c1a6"]
+[ext_resource type="Script" uid="uid://br76bl3318lqd" path="res://scenes/level_selector/level_selector.gd" id="1_ojiuy"]
+[ext_resource type="LabelSettings" uid="uid://fggsdm5kyg5j" path="res://resources/title_label.tres" id="2_8k1d3"]
+
+[node name="LevelSelector" type="Control" unique_id=1527879880]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ojiuy")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1071186098]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -180.0
+offset_bottom = 180.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_7c1a6")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="MC" type="MarginContainer" parent="." unique_id=1340035643]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VB" type="VBoxContainer" parent="MC" unique_id=647490411]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MC/VB" unique_id=1126924273]
+layout_mode = 2
+text = "SOKOBAN"
+label_settings = ExtResource("2_8k1d3")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="MC/VB" unique_id=962888246]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/h_separation = 8
+theme_override_constants/v_separation = 8
+columns = 8

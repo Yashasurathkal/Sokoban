@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://7o43gs3vgtl6"]
+
+[ext_resource type="FontFile" uid="uid://cifd7mrdvxqcs" path="res://assets/TitanOne-Regular.ttf" id="1_2vj67"]
+[ext_resource type="Texture2D" uid="uid://cprpvyupkb0r" path="res://assets/blue_panel.png" id="1_o0o4w"]
+[ext_resource type="Script" uid="uid://bkxljwe6mkvv0" path="res://scenes/LevelButton/LevelButton.gd" id="3_6s8td"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v0s4m"]
+texture = ExtResource("1_o0o4w")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+
+[node name="LevelButton" type="Button" unique_id=881754661]
+offset_right = 100.0
+offset_bottom = 100.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("1_2vj67")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxTexture_v0s4m")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_v0s4m")
+theme_override_styles/hover = SubResource("StyleBoxTexture_v0s4m")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_v0s4m")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_v0s4m")
+text = "00"
+script = ExtResource("3_6s8td")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

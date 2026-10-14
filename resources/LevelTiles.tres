@@ -1,0 +1,28 @@
+[gd_resource type="TileSet" format=3 uid="uid://dgsr22apl4522"]
+
+[ext_resource type="Texture2D" uid="uid://tcneo07se78g" path="res://assets/spritesheet.png" id="1_a7amt"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hnne4"]
+texture = ExtResource("1_a7amt")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+
+[resource]
+tile_size = Vector2i(64, 64)
+sources/0 = SubResource("TileSetAtlasSource_hnne4")

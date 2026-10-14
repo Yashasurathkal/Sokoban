@@ -1,0 +1,40 @@
+[gd_scene format=4 uid="uid://cnnokp4mvjjsi"]
+
+[ext_resource type="Texture2D" uid="uid://bsfclnvmg2001" path="res://assets/Bg.png" id="1_h3e3j"]
+[ext_resource type="Script" uid="uid://dk0welvsd71dt" path="res://scenes/level/level.gd" id="1_i166f"]
+[ext_resource type="PackedScene" uid="uid://dd372m1sc8s7m" path="res://scenes/game_ui/game_ui.tscn" id="2_nbgty"]
+[ext_resource type="TileSet" uid="uid://dgsr22apl4522" path="res://resources/LevelTiles.tres" id="4_qkmgm"]
+[ext_resource type="PackedScene" uid="uid://dtt3qf6tcin08" path="res://scenes/Player/Player.tscn" id="5_hnne4"]
+
+[node name="Level" type="Node" unique_id=720878197]
+script = ExtResource("1_i166f")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1825917000]
+position = Vector2(690, 529)
+scale = Vector2(1.9, 1.9)
+texture = ExtResource("1_h3e3j")
+
+[node name="TileLayers" type="Node2D" parent="." unique_id=1529742596]
+
+[node name="Floors" type="TileMapLayer" parent="TileLayers" unique_id=22678361]
+tile_map_data = PackedByteArray("AAAHAAQAAAAEAAAAAAAHAAUAAAAEAAAAAAAHAAYAAAAEAAAAAAAHAAcAAAAEAAAAAAAHAAgAAAAEAAAAAAAIAAQAAAAEAAAAAAAIAAUAAAAEAAAAAAAIAAYAAAAEAAAAAAAIAAcAAAAEAAAAAAAIAAgAAAAEAAAAAAAJAAQAAAAEAAAAAAAJAAUAAAAEAAAAAAAJAAYAAAAEAAAAAAAJAAcAAAAEAAAAAAAJAAgAAAAEAAAAAAAKAAQAAAAEAAAAAAAKAAUAAAAEAAAAAAAKAAYAAAAEAAAAAAAKAAcAAAAEAAAAAAAKAAgAAAAEAAAAAAALAAQAAAAEAAAAAAALAAUAAAAEAAAAAAALAAYAAAAEAAAAAAALAAcAAAAEAAAAAAALAAgAAAAEAAAAAAAMAAQAAAAEAAAAAAAMAAUAAAAEAAAAAAAMAAYAAAAEAAAAAAAMAAcAAAAEAAAAAAAMAAgAAAAEAAAAAAANAAQAAAAEAAAAAAANAAUAAAAEAAAAAAANAAYAAAAEAAAAAAANAAcAAAAEAAAAAAANAAgAAAAEAAAAAAA=")
+tile_set = ExtResource("4_qkmgm")
+
+[node name="Walls" type="TileMapLayer" parent="TileLayers" unique_id=1867669953]
+tile_map_data = PackedByteArray("AAAGAAMAAAAAAAAAAAAGAAQAAAAAAAAAAAAGAAUAAAAAAAAAAAAGAAYAAAAAAAAAAAAGAAcAAAAAAAAAAAAGAAgAAAAAAAAAAAAGAAkAAAAAAAAAAAAHAAMAAAAAAAAAAAAHAAkAAAAAAAAAAAAIAAMAAAAAAAAAAAAIAAkAAAAAAAAAAAAJAAMAAAAAAAAAAAAJAAkAAAAAAAAAAAAKAAMAAAAAAAAAAAAKAAkAAAAAAAAAAAALAAMAAAAAAAAAAAALAAkAAAAAAAAAAAAMAAMAAAAAAAAAAAAMAAkAAAAAAAAAAAANAAMAAAAAAAAAAAANAAkAAAAAAAAAAAAOAAMAAAAAAAAAAAAOAAQAAAAAAAAAAAAOAAUAAAAAAAAAAAAOAAYAAAAAAAAAAAAOAAcAAAAAAAAAAAAOAAgAAAAAAAAAAAAOAAkAAAAAAAAAAAA=")
+tile_set = ExtResource("4_qkmgm")
+
+[node name="Targets" type="TileMapLayer" parent="TileLayers" unique_id=1566220230]
+tile_map_data = PackedByteArray("AAALAAYAAAACAAAAAAANAAQAAAADAAAAAAAJAAgAAAACAAAAAAAHAAUAAAADAAAAAAANAAgAAAADAAAAAAAKAAQAAAADAAAAAAA=")
+tile_set = ExtResource("4_qkmgm")
+
+[node name="Boxes" type="TileMapLayer" parent="TileLayers" unique_id=53626766]
+tile_map_data = PackedByteArray("AAAJAAUAAAABAAAAAAAIAAcAAAABAAAAAAAMAAcAAAABAAAAAAAMAAUAAAABAAAAAAAKAAYAAAABAAAAAAA=")
+tile_set = ExtResource("4_qkmgm")
+
+[node name="Player" parent="." unique_id=2042965959 instance=ExtResource("5_hnne4")]
+animation = &"right"
+autoplay = ""
+frame_progress = 0.4694511
+
+[node name="GameUi" parent="." unique_id=379966749 instance=ExtResource("2_nbgty")]
